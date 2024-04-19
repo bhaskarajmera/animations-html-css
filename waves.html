@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+        /* animation: property in the following order */
+
+        /* animation: [animation-name] [animation-duration] [animation-timing-function]
+        [animation-delay] [animation-iteration-count] [animation-direction]
+        [animation-fill-mode] [animation-play-state]; */
+
+        .box {
+            position: fixed;
+            top: 0;
+            transform: rotate(80deg); 
+            left: 0;
+        }
+        
+        .wave {
+            position: absolute;
+            opacity: .4;
+            width: 1500px;
+            height: 1300px;
+            margin-left: -150px;
+            margin-top: -250px;
+            border-radius: 43%;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            from { transform: rotate(360deg); }
+        }
+
+        .wave.-one {
+            animation: rotate 7000ms infinite linear;
+            opacity: .1;
+            background: #0af;
+        }
+        
+        .wave.-two {
+            animation: rotate 3000ms infinite linear;
+            opacity: .1;
+            background: black;
+        }
+        
+        .wave.-three {
+            animation: rotate 7500ms infinite linear;
+            background-color: #77daff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class='box'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+        /* animation: property in the following order */
+
+        /* animation: [animation-name] [animation-duration] [animation-timing-function]
+        [animation-delay] [animation-iteration-count] [animation-direction]
+        [animation-fill-mode] [animation-play-state]; */
+
+        .slide-r {
+            width: 100px;
+            height: 100px;
+            background: #ff7a59;
+            animation-name: slide-right;
+            animation-duration: 4s;
+        }
+        
+        @keyframes slide-right {
+            from {
+            margin-left: 0px;
+            }
+            50% {
+            margin-left: 100px;
+            }
+            to {
+            margin-left: 200px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="slide-r"></div>
+</body>
+</html>
